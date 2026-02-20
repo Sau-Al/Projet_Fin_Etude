@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <title>Projet Final</title>
+    <title>Projet de fin d'études</title>
 </head>
 <body>
     <!-- MENU FIXE À GAUCHE -->
@@ -18,20 +18,21 @@
     <a href="#video"><img src="media/star.svg" alt=""></a>
     <a href="#gallery"><img src="media/star.svg" alt=""></a>
     <a href="#explore"><img src="media/star.svg" alt=""></a>
-    <a href="#about_me"><img src="media/star.svg" alt=""></a>
+    <a href="#aboutMe"><img src="media/star.svg" alt=""></a>
 </nav>
 
-    <section id="titre" style="background-image: url('/media/placeholder.png'); background-size: cover; background-position: center;">
+    <section id="titre" style="background-image: url('./media/placeholder.png'); background-size: cover; background-position: center;">
         <div class="titre_text">
             <h2>Un court métrage par Alicia Sau</h2>
         <h1>Je veux être</h1>
         </div>
         <div class="buttons">
-            <button>Visionner</button>
-            <button>Infos</button>
+            <button onclick="window.location.href='#video'">Visionner</button>
+            <button onclick="window.location.href='#explore'">Infos</button>
         </div>
     </section>
     <section id="video">
+        <div class="container_general">
         <!-- Remplacer le lien pour la vidéo officelle plus tard -->
         <div class="container">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/F2mmSNImTYw?si=bHKotJrTXHgmYQf0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -47,18 +48,25 @@
             les aspirations professionnelles et personnelles, ainsi que la pression du temps et
             du choix d’avenir chez les jeunes adultes.</p>
         </div>
+        </div>
     </section>
     <section id="gallery">
+        <div class="container_general">
         <h1>Création du court métrage</h1>
         <div>
             <!-- Gallery -->
         </div>
         <div>
             <h2>Création du court métrage</h2>
-            <p>Le court métrage a été conçu à partir d'une idée originale de l'élève, inspirée de ses propres expériences et aspirations. Il explore les thèmes de l'identité, du changement et des choix futurs.</p>
+            <p>
+            L’objectif initial de ma recherche était de recréer une scène cinématographique inspirée du film Everything Everywhere All at Once en utilisant principalement la technique du fond vert et le compositing dans Adobe After Effects,
+            combinés au montage et au color grading dans DaVinci Resolve.
+            Je souhaitais reproduire non seulement l’esthétique visuelle de la scène, mais surtout son atmosphère émotionnelle, en explorant des effets de décalage temporel, de lumière et de symbolisme visuel.</p>
+        </div>
         </div>
     </section>
     <section id="explore">
+        <div class="container_general">
         <h1>Explorons l'univers visuel</h1>
         <div>
             <div class="section_1">
@@ -78,7 +86,7 @@
             <div class="section_2">
                 <div class="mini_gallery">
                 <!-- mini gallery 3 images-->
-                <img src="/media/essai_1.png" alt=""> 
+                <img src="./media/essai_1.png" alt=""> 
                 <img src="" alt="">
                 <img src="" alt="">
                 </div>
@@ -90,14 +98,14 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section id="about_me">
-        <div class="texte">
-            <h1>À propos</h1>
-        <h3>Finissante en Techniques d’Intégration Multimédia, je me spécialise dans la conception visuelle et la création d’expériences numériques attrayantes.
-            Toujours motivée à perfectionner mes compétences, je suis ouverte à explorer de nouvelles approches créatives et technologiques afin d’apporter des solutions adaptées et innovantes.
-            Je suis actuellement à la recherche d’un stage où je pourrai mettre en valeur ma créativité et mon sens du détail.</h3>
         </div>
+    </section>
+    <section id="aboutMe">
+        <div class="container_general">
+            <h1>À propos</h1>
+        <p>Finissante en Techniques d’Intégration Multimédia, je me spécialise dans la conception visuelle et la création d’expériences numériques attrayantes.
+            Toujours motivée à perfectionner mes compétences, je suis ouverte à explorer de nouvelles approches créatives et technologiques afin d’apporter des solutions adaptées et innovantes.
+            Je suis actuellement à la recherche d’un stage où je pourrai mettre en valeur ma créativité et mon sens du détail.</p>
         <div class="sociaux">
             <h2>Me contacter</h2>
             <div class="links">
@@ -105,10 +113,18 @@
                 <a href="https://www.behance.net/h0pe"><img src="media/Behance.svg" alt=""></a>
                 <a href="mailto:aliciasau8@gmail.com"><img src="media/Email.svg" alt=""></a>
         </div>
-        <div class="gallery">
-            <img src="/media/photo_profil.png" alt="">
         </div>
-        </section>
+
+        <!-- Gallery -->
+        <!-- Changer les photos pour des projets que j'ai fait -->
+        <div class="gallery">
+            <img src="./media/Illustrator_TP1.png" alt="">
+            <img src="./media/Illustrator_TP2.png" alt="">
+            <img src="./media/Illustrator_TP3.png" alt="">
+            <img src="./media/Illustrator_TP1.png" alt="">
+            <img src="./media/Illustrator_TP2.png" alt="">
+        </div>
+    </section>
 
     <!-- Lien vers le JS -->
     <script src="script.js"></script>

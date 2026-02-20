@@ -96,6 +96,8 @@ section{
     flex-direction: column;
     padding: 20px;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 #titre{
@@ -110,15 +112,32 @@ section{
     flex-direction: column;
     align-items: center;
     filter: none;
+
+    h2{
+        font-size: 32px;
+    }
+
+    h1{
+        font-size: 96px;
+        margin: 0 0 3rem;
+    }
     }
 }
 
-h1{
-    font-family: 'Playfair Display', sans-serif;
+.titre_text{
+    h1{
+        font-family: 'Playfair Display', sans-serif;
+    }
 }
 
-h2, h3 , p{
+h1, h2, h3 , p{
     font-family: 'Inter', sans-serif;
+}
+
+.buttons{
+    display: flex;
+    gap: 3rem;
+    font-size: 24px;
 }
 
 button{
@@ -129,6 +148,8 @@ button{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 200px;
+    height: 64px;
 }
 
 .infos{
@@ -149,8 +170,8 @@ button{
     gap: 2rem;
 
     .container{
-        width: 80%;
-        height: 450px;
+        width: 100%;
+        height: 100%;
         box-shadow: #141A3A 0px 10px 20px;
     }
 
@@ -173,6 +194,62 @@ button{
     gap: 2rem;
 }
 
+#explore h1 {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+/* Conteneur des sections */
+#explore > .container_general > div {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+/* SECTION 1 → image à gauche, texte à droite */
+.section_1 {
+    justify-content: flex-start;
+}
+
+/* SECTION 2 → image à droite, texte à gauche */
+.section_2 {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+
+/* Mini gallery */
+.mini_gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 120px);
+    grid-auto-rows: 120px;
+    gap: 15px;
+}
+
+.mini_gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Texte */
+.section_1 > div:last-child,
+.section_2 > div:last-child {
+    max-width: 420px;
+}
+
+.section_1 h2,
+.section_2 h2 {
+    margin-bottom: 15px;
+}
+
+.section_1 p,
+.section_2 p {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
 .mini_gallery{
     display: flex;
     flex-direction: row;
@@ -185,17 +262,20 @@ button{
     }
 }
 
-#about_me{
+#aboutMe{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 2rem;
     padding: 0 3rem;
 }
+
+.container_general{
+    width: 85%;
+}
+
 .links{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     gap: 1rem;
     a{
        img{
@@ -205,6 +285,48 @@ button{
         height: 30px;
        }
     }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 150px;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Style commun des images */
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+/* Tailles différentes pour créer du rythme visuel */
+.gallery img:nth-child(1) {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.gallery img:nth-child(2) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.gallery img:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+/* Animation hover */
+.gallery img:hover {
+    transform: scale(1.06) translateY(-5px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+    z-index: 2;
 }
 
 footer{
