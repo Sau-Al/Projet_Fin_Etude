@@ -1,8 +1,94 @@
+/* Scroll fluide */
+html {
+    scroll-behavior: smooth;
+}
+
+/* CSS général */
 body{
     margin: 0;
     padding: 0;
     color: white;
     background-color: #141A3A;
+}
+
+/* NAVIGATION LATÉRALE */
+.side-nav {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+/* BOUTONS */
+.side-nav img {
+    width: 28px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    filter: brightness(0) invert(1); /* blanc/gris */
+}
+
+/* Hover and active */
+/* Quand une étoile se fait cliquer, il y a une animation de rotation */
+.side-nav a img:active {
+    transform: rotate(90deg);
+}
+
+/* ========================= */
+/* ⭐ 1 — Rose pastel (#F2A7C6) */
+/* ========================= */
+.side-nav a:nth-child(1).active img {
+    filter: invert(77%) sepia(23%) saturate(566%) hue-rotate(303deg) brightness(150%) contrast(96%);
+}
+
+.side-nav a:nth-child(1):hover img {
+    filter: invert(70%) sepia(35%) saturate(700%) hue-rotate(303deg) brightness(92%) contrast(105%);
+}
+
+/* ========================= */
+/* ⭐ 2 — Vert menthe (#A8E6CF) */
+/* ========================= */
+.side-nav a:nth-child(2).active img {
+    filter: invert(88%) sepia(20%) saturate(397%) hue-rotate(102deg) brightness(150%) contrast(95%);
+}
+
+.side-nav a:nth-child(2):hover img {
+    filter: invert(82%) sepia(30%) saturate(550%) hue-rotate(102deg) brightness(92%) contrast(105%);
+}
+
+/* ========================= */
+/* ⭐ 3 — Bleu clair (#A7C7E7) */
+/* ========================= */
+.side-nav a:nth-child(3).active img {
+    filter: invert(80%) sepia(18%) saturate(403%) hue-rotate(181deg) brightness(150%) contrast(93%);
+}
+
+.side-nav a:nth-child(3):hover img {
+    filter: invert(75%) sepia(25%) saturate(520%) hue-rotate(181deg) brightness(93%) contrast(105%);
+}
+
+/* ========================= */
+/* ⭐ 4 — Jaune doré (#E6C77A) */
+/* ========================= */
+.side-nav a:nth-child(4).active img {
+    filter: invert(85%) sepia(46%) saturate(586%) hue-rotate(359deg) brightness(150%) contrast(96%);
+}
+
+.side-nav a:nth-child(4):hover img {
+    filter: invert(78%) sepia(55%) saturate(720%) hue-rotate(359deg) brightness(90%) contrast(110%);
+}
+
+/* ========================= */
+/* ⭐ 5 — Violet pastel (#C7B9E2) */
+/* ========================= */
+.side-nav a:nth-child(5).active img {
+    filter: invert(82%) sepia(17%) saturate(415%) hue-rotate(230deg) brightness(150%) contrast(95%);
+}
+
+.side-nav a:nth-child(5):hover img {
+    filter: invert(76%) sepia(28%) saturate(520%) hue-rotate(230deg) brightness(92%) contrast(105%);
 }
 
 section{
