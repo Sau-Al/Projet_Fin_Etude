@@ -94,29 +94,36 @@ body{
 section{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding: 20px;
-    margin: 20px;
+    align-items: center;
 }
 
 #titre{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
 
     .titre_text{
         display: flex;
     flex-direction: column;
     align-items: center;
+    filter: none;
     }
 }
 
-h1, h2, h3 , p{
-    font-family: 'Arial', sans-serif;
+h1{
+    font-family: 'Playfair Display', sans-serif;
+}
+
+h2, h3 , p{
+    font-family: 'Inter', sans-serif;
 }
 
 button{
     background-color: #E6C77A;
+    font-family: 'Inter', sans-serif;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -138,10 +145,17 @@ button{
 
 #video{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 2rem;
-    iframe{
-        border-radius: 10px;
+
+    .container{
+        width: 80%;
+        height: 450px;
+        box-shadow: #141A3A 0px 10px 20px;
+    }
+
+    .infos_video{
+        padding: 0 3rem;
     }
 }
 
@@ -169,4 +183,32 @@ button{
         object-fit: cover;
         border-radius: 10px;
     }
+}
+
+#about_me{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 0 3rem;
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    a{
+       img{
+        /* couleur des svg en blanc */
+        filter: brightness(0) invert(1);
+        width: 30px;
+        height: 30px;
+       }
+    }
+}
+
+footer{
+    color: white;
+    text-align: center;
+    padding-top: 20px;
 }

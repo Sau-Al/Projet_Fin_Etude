@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <title>Projet Final</title>
 </head>
 <body>
@@ -18,11 +21,10 @@
     <a href="#about_me"><img src="media/star.svg" alt=""></a>
 </nav>
 
-    <section id="titre">
+    <section id="titre" style="background-image: url('/media/placeholder.png'); background-size: cover; background-position: center;">
         <div class="titre_text">
-            <!-- Je veux que le background image est un gif de quelques scènes du court-métrage -->
-            <h2>Un court metrage par Alicia Sau</h2>
-        <h1>Je veux etre</h1>
+            <h2>Un court métrage par Alicia Sau</h2>
+        <h1>Je veux être</h1>
         </div>
         <div class="buttons">
             <button>Visionner</button>
@@ -30,25 +32,30 @@
         </div>
     </section>
     <section id="video">
-        <iframe width="560" height="315" src="https://youtu.be/Nym2EuoESb0?si=IFNIlgN9X99_b12b" frameborder="0" allowfullscreen></iframe>
-        <div>
+        <!-- Remplacer le lien pour la vidéo officelle plus tard -->
+        <div class="container">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/F2mmSNImTYw?si=bHKotJrTXHgmYQf0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="infos_video">
             <h2>Synopsis</h2>
             <div class="infos">
                 <h3>2026</h3>
                 <h3>genre</h3>
                 <h3>5min</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+            <p>Ce projet consiste en la création d’une œuvre multimédia narrative explorant la construction identitaire, 
+            les aspirations professionnelles et personnelles, ainsi que la pression du temps et
+            du choix d’avenir chez les jeunes adultes.</p>
         </div>
     </section>
     <section id="gallery">
-        <h1>Creation du court metrage</h1>
+        <h1>Création du court métrage</h1>
         <div>
             <!-- Gallery -->
         </div>
         <div>
-            <h2>creation du court metrage</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+            <h2>Création du court métrage</h2>
+            <p>Le court métrage a été conçu à partir d'une idée originale de l'élève, inspirée de ses propres expériences et aspirations. Il explore les thèmes de l'identité, du changement et des choix futurs.</p>
         </div>
     </section>
     <section id="explore">
@@ -64,7 +71,7 @@
 
                 <div>
                 <h2>Explorations</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+                <p>Les explorations visuelles du court métrage ont permis d'explore les thèmes de l'identité et du changement à travers des éléments symboliques et des compositions artistiques.</p>
                 <button>Voir plus</button>
                 </div>
             </div>
@@ -84,8 +91,30 @@
             </div>
         </div>
     </section>
+    <section id="about_me">
+        <div class="texte">
+            <h1>À propos</h1>
+        <h3>Finissante en Techniques d’Intégration Multimédia, je me spécialise dans la conception visuelle et la création d’expériences numériques attrayantes.
+            Toujours motivée à perfectionner mes compétences, je suis ouverte à explorer de nouvelles approches créatives et technologiques afin d’apporter des solutions adaptées et innovantes.
+            Je suis actuellement à la recherche d’un stage où je pourrai mettre en valeur ma créativité et mon sens du détail.</h3>
+        </div>
+        <div class="sociaux">
+            <h2>Me contacter</h2>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/alicia-sau-4ba896382/"><img src="media/LinkedIn.svg" alt=""></a>
+                <a href="https://www.behance.net/h0pe"><img src="media/Behance.svg" alt=""></a>
+                <a href="mailto:aliciasau8@gmail.com"><img src="media/Email.svg" alt=""></a>
+        </div>
+        <div class="gallery">
+            <img src="/media/photo_profil.png" alt="">
+        </div>
+        </section>
 
     <!-- Lien vers le JS -->
     <script src="script.js"></script>
 </body>
+<footer>
+    <h3>Merci à tous ceux qui ont aidés à créer ce projet.</h3>
+    <h4>© 2026 Alicia Sau. Tous droits réservés.</h4>
+</footer>
 </html>
