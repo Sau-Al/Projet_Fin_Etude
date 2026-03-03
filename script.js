@@ -133,3 +133,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+const cursor = document.getElementById('custom-cursor');
+
+window.addEventListener('mousemove', (e) => {
+  cursor.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 20}px)`; 
+  // -20 pour centrer le curseur
+});
+
+// Optionnel : hover sur images ou boutons pour agrandir le curseur
+const hoverElems = document.querySelectorAll('button, .gallery img, .mini_gallery img');
+
+hoverElems.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+        cursor.style.width = '50px';
+        cursor.style.height = '50px';
+        cursor.style.background = 'rgba(168, 230, 207, 0.6)'; // vert pastel
+    });
+    el.addEventListener('mouseleave', () => {
+        cursor.style.width = '30px';
+        cursor.style.height = '30px';
+        cursor.style.background = 'rgba(0, 26, 255, 0.664)';
+    });
+});
