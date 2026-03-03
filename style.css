@@ -98,6 +98,15 @@ section{
     align-items: center;
     justify-content: center;
     height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    pointer-events: auto; /* important pour interaction */
+    transition: transform 0.3s ease-out;
+    will-change: transform;
 }
 
 #titre{
@@ -176,7 +185,7 @@ button{
     }
 
     .infos_video{
-        padding: 0 3rem;
+        padding: 0;
     }
 }
 
@@ -192,6 +201,7 @@ button{
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    
 }
 
 #explore h1 {
@@ -206,31 +216,40 @@ button{
     gap: 70px;
 }
 
-/* SECTION 1 → image à gauche, texte à droite */
-.section_1 {
-    justify-content: flex-start;
-}
-
-/* SECTION 2 → image à droite, texte à gauche */
-.section_2 {
-    justify-content: flex-end;
-    flex-direction: row-reverse;
+/* SECTION 1 & 2 en format mobile */
+.section_1, .section_2{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
 }
 
 /* Mini gallery */
 .mini_gallery {
     display: grid;
-    grid-template-columns: repeat(2, 120px);
-    grid-auto-rows: 120px;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
     gap: 15px;
+}
+
+/* Image principale plus grande */
+.mini_gallery img:first-child {
+    grid-column: span 2;
 }
 
 .mini_gallery img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+/* Effet hover */
+.mini_gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 /* Texte */
@@ -251,15 +270,11 @@ button{
 }
 
 .mini_gallery{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    img{
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 150px;
+    gap: 20px;
+    padding: 20px;
 }
 
 #aboutMe{
@@ -271,6 +286,14 @@ button{
 
 .container_general{
     width: 85%;
+}
+
+/* LE PLUS IMPORTANT : le contenu AU-DESSUS */
+.container_general,
+.titre_text,
+.buttons{
+    position: relative;
+    z-index: 2;
 }
 
 .links{
@@ -290,7 +313,7 @@ button{
 .gallery {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: 150px;
+    grid-auto-rows: 100px;
     gap: 20px;
     padding: 20px;
 }
@@ -333,4 +356,146 @@ footer{
     color: white;
     text-align: center;
     padding-top: 20px;
+}
+
+/* Overlay pour l'image agrandie */
+.image-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.image-modal.active {
+    display: flex;
+}
+
+.image-modal .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    z-index: 2100;
+}
+
+.modal-content {
+    display: flex;
+    gap: 40px;
+    max-width: 90%;
+    max-height: 80%;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.modal-content img {
+    max-width: 60%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.modal-info {
+    max-width: 35%;
+    color: white;
+    overflow-y: auto;
+}
+
+.modal-info h3 {
+    margin-top: 0;
+}
+
+.modal-info p, .modal-info li {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* ================= Fade-in ================= */
+/* fade-in/out base */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* visible state */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Container JS */
+.stars-container {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    will-change: transform;
+}
+
+/* Étoiles */
+.star {
+    position: absolute;
+    width: clamp(14px, 2vw, 26px);
+    opacity: 0.8;
+    animation: floatStar ease-in-out infinite;
+}
+
+/* Animation */
+@keyframes floatStar {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(12deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* ====== TABLET ====== */
+@media (min-width: 768px) {
+    .section_1,
+    .section_2 {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 60px;
+    }
+
+    .mini_gallery {
+        grid-template-columns: repeat(2, 160px);
+        grid-template-rows: repeat(2, 160px);
+    }
+
+    .section_1 > div:last-child,
+    .section_2 > div:last-child {
+        text-align: left;
+    }
+}
+
+/* Taille Desktop */
+@media (min-width: 1024px) {
+    .section_1, .section_2 {
+        justify-content: space-between;
+    }
+
+    @media (min-width: 1024px) {
+
+    /* Alternance visuelle */
+    .section_2 {
+        flex-direction: row-reverse;
+    }
+
+    .mini_gallery {
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: repeat(2, 200px);
+    }
+}
 }
