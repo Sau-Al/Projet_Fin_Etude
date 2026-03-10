@@ -1,0 +1,119 @@
+body {
+    font-family: inter;
+    background: #141A3A;
+    color: white;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    font-family: 'Inter', sans-serif;
+}
+
+/* ================= */
+/* MOBILE (base) */
+/* ================= */
+
+.blog-header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.blog-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.text {
+    width: 100%;
+}
+
+.image {
+    width: 100%;
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 15px rgba(246, 167, 198, 0.5),
+        0 8px 30px rgba(168, 230, 207, 0.5),
+        0 12px 45px rgba(167, 199, 231, 0.5);
+}
+
+.image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 40px;
+}
+
+footer button {
+    background-color: #E6C77A;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 180px;
+    height: 54px;
+}
+
+footer button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(246, 167, 198, 0.5);
+    background: linear-gradient(90deg, #f2a7c6, #a8e6cf, #a7c7e7);
+}
+
+.button_retour {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* ================= */
+/* TABLETTE */
+/* ================= */
+
+@media (min-width: 768px) {
+
+    .blog-section {
+        flex-direction: row;
+        text-align: left;
+        gap: 40px;
+        padding: 60px 8%;
+    }
+
+    .blog-section.reverse {
+        flex-direction: row-reverse;
+    }
+
+}
+
+
+/* ================= */
+/* GRAND ÉCRAN */
+/* ================= */
+
+@media (min-width: 1200px) {
+
+    .blog-section {
+        gap: 60px;
+        padding: 80px 10%;
+    }
+
+    .blog-header {
+        padding: 80px 20px;
+    }
+
+}

@@ -4,54 +4,62 @@ html {
 }
 
 /* CSS général */
-body{
+body {
     margin: 0;
     padding: 0;
     color: white;
     background-color: #141A3A;
-    cursor: none; /* cacher le curseur par défaut */
+    cursor: none;
+    /* cacher le curseur par défaut */
 
 }
 
 /* Curseur étoile glowy rainbow */
 #custom-cursor {
-  width: 40px;
-  height: 40px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9999;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
 
-  /* SVG comme masque */
-  mask: url('media/star.svg') no-repeat center;
-  -webkit-mask: url('media/star.svg') no-repeat center;
-  mask-size: contain;
-  -webkit-mask-size: contain;
+    /* SVG comme masque */
+    mask: url('media/star.svg') no-repeat center;
+    -webkit-mask: url('media/star.svg') no-repeat center;
+    mask-size: contain;
+    -webkit-mask-size: contain;
 
-  /* Gradient animé */
-  background: linear-gradient(45deg, #ff6ec4, #7873f5, #42f5c4, #ff6ec4);
-  background-size: 400% 400%;
-  animation: gradientMove 5s ease infinite;
+    /* Gradient animé */
+    background: linear-gradient(45deg, #ff6ec4, #7873f5, #42f5c4, #ff6ec4);
+    background-size: 400% 400%;
+    animation: gradientMove 5s ease infinite;
 
-  /* Glow */
-  box-shadow: 0 0 10px #fff, 0 0 20px #ff6ec4, 0 0 30px #7873f5, 0 0 40px #42f5c4;
-  border-radius: 50%; /* adoucir les bords si besoin */
+    /* Glow */
+    box-shadow: 0 0 10px #fff, 0 0 20px #ff6ec4, 0 0 30px #7873f5, 0 0 40px #42f5c4;
+    border-radius: 50%;
+    /* adoucir les bords si besoin */
 }
 
 /* Animation du gradient */
 @keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 #custom-cursor {
-  filter: drop-shadow(0 0 6px #fff)
-          drop-shadow(0 0 12px #ff6ec4)
-          drop-shadow(0 0 18px #7873f5)
-          drop-shadow(0 0 24px #42f5c4);
-  transition: transform 0.05s ease; /* suive la souris plus fluide */
+    filter: drop-shadow(0 0 6px #fff) drop-shadow(0 0 12px #ff6ec4) drop-shadow(0 0 18px #7873f5) drop-shadow(0 0 24px #42f5c4);
+    transition: transform 0.05s ease;
+    /* suive la souris plus fluide */
 }
 
 /* NAVIGATION LATÉRALE */
@@ -70,7 +78,8 @@ body{
 .side-nav img {
     width: 28px;
     transition: filter 0.3s ease, transform 0.3s ease;
-    filter: brightness(0) invert(1); /* blanc/gris */
+    filter: brightness(0) invert(1);
+    /* blanc/gris */
 }
 
 /* Hover and active */
@@ -134,7 +143,7 @@ body{
     filter: invert(76%) sepia(28%) saturate(520%) hue-rotate(230deg) brightness(92%) contrast(105%);
 }
 
-section{
+section {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -147,55 +156,59 @@ section{
 
 .star {
     position: absolute;
-    pointer-events: auto; /* important pour interaction */
+    pointer-events: auto;
+    /* important pour interaction */
     transition: transform 0.3s ease-out;
     will-change: transform;
 }
 
-#titre{
+#titre {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
 
-    .titre_text{
+    .titre_text {
         display: flex;
-    flex-direction: column;
-    align-items: center;
-    filter: none;
+        flex-direction: column;
+        align-items: center;
+        filter: none;
 
-    h2{
-        font-size: 32px;
-    }
+        h2 {
+            font-size: 32px;
+        }
 
-    h1{
-        font-size: 96px;
-        margin: 0 0 3rem;
-    }
+        h1 {
+            font-size: 96px;
+            margin: 0 0 3rem;
+        }
     }
 }
 
-.titre_text{
-    h1{
+.titre_text {
+    h1 {
         font-family: 'Playfair Display', sans-serif;
     }
 }
 
-h1, h2, h3 , h4, p{
+h1,
+h2,
+h3,
+h4,
+p {
     font-family: 'Inter', sans-serif;
 }
 
-h1:hover, h2:hover {
-    background: linear-gradient(
-        45deg, 
-        #ff7f00, 
-        #ffff00, 
-        #00ff00, 
-        #0000ff, 
-        #4b0082, 
-        #8f00ff
-    );
+h1:hover,
+h2:hover {
+    background: linear-gradient(45deg,
+            #ff7f00,
+            #ffff00,
+            #00ff00,
+            #0000ff,
+            #4b0082,
+            #8f00ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -209,32 +222,34 @@ h1:hover, h2:hover {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
 
-p{
+p {
     line-height: 1.6;
     overflow: initial;
 }
 
-.buttons{
+.buttons {
     display: flex;
     gap: 3rem;
     font-size: 24px;
 }
 
 button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(246,167,198,0.5);
-  background: linear-gradient(90deg,#f2a7c6,#a8e6cf,#a7c7e7);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(246, 167, 198, 0.5);
+    background: linear-gradient(90deg, #f2a7c6, #a8e6cf, #a7c7e7);
 }
 
-button{
+button {
     background-color: #E6C77A;
     font-family: 'Inter', sans-serif;
     color: white;
@@ -246,11 +261,12 @@ button{
     height: 64px;
 }
 
-.infos{
+.infos {
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    h3{
+
+    h3 {
         background-color: #dad7fa;
         height: 25px;
         padding: 0.5rem;
@@ -258,12 +274,12 @@ button{
     }
 }
 
-#video{
+#video {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 
-    .container{
+    .container {
         width: 100%;
         height: 100%;
         box-shadow: #141A3A 0px 10px 20px;
@@ -271,24 +287,30 @@ button{
         justify-content: center;
     }
 
-    .infos_video{
+    .infos_video {
         padding: 0;
     }
 }
 
-#gallery{
+#gallery {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
 }
 
-#explore{
+#explore {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    
+
+}
+
+.button_explore {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 #explore h1 {
@@ -297,14 +319,15 @@ button{
 }
 
 /* Conteneur des sections */
-#explore > .container_general > div {
+#explore>.container_general>div {
     display: flex;
     flex-direction: column;
     gap: 70px;
 }
 
 /* SECTION 1 & 2 en format mobile */
-.section_1, .section_2{
+.section_1,
+.section_2 {
     display: flex;
     flex-wrap: wrap;
     flex: 1;
@@ -340,8 +363,8 @@ button{
 }
 
 /* Texte */
-.section_1 > div:last-child,
-.section_2 > div:last-child {
+.section_1>div:last-child,
+.section_2>div:last-child {
     max-width: 420px;
 }
 
@@ -356,79 +379,95 @@ button{
     line-height: 1.6;
 }
 
-.mini_gallery{
+.mini_gallery {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: 150px;
     gap: 20px;
     padding: 20px;
+
+    .extra_image {
+        display: none;
+    }
 }
 
-#aboutMe{
+#aboutMe {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding: 0 3rem;
+
     .container_general {
-  position: relative;
-}
+        position: relative;
+    }
 }
 
 /* Sticker flottant */
 .sticker {
-  position: absolute;       /* flottant par-dessus le contenu */
-  top: 60px;                /* distance depuis le haut */
-  right: 10px;              /* distance depuis la droite */
-  width: 200px;              /* taille du sticker */
-  z-index: 10;              /* au-dessus du texte */
-  /* etoile doit etre un peu tournee */
+    position: absolute;
+    /* flottant par-dessus le contenu */
+    top: 60px;
+    /* distance depuis le haut */
+    right: 10px;
+    /* distance depuis la droite */
+    width: 200px;
+    /* taille du sticker */
+    z-index: 10;
+    /* au-dessus du texte */
+    /* etoile doit etre un peu tournee */
     transform: rotate(15deg);
 }
 
 .sticker img {
-  width: 100%;
-  height: auto;
-  /* Contour avec un filter glowy */
-    filter: drop-shadow(0 0 6px #fff)
-            drop-shadow(0 0 12px #ff6ec4)
-            drop-shadow(0 0 18px #7873f5)
-            drop-shadow(0 0 24px #42f5c4);
+    width: 100%;
+    height: auto;
+    /* Contour avec un filter glowy */
+    filter: drop-shadow(0 0 6px #fff) drop-shadow(0 0 12px #ff6ec4) drop-shadow(0 0 18px #7873f5) drop-shadow(0 0 24px #42f5c4);
 }
 
 /* Hover du sticker */
 .sticker img:hover {
-  animation: floatSticker 1s ease-in-out infinite;
+    animation: floatSticker 1s ease-in-out infinite;
 }
 
 @keyframes floatSticker {
-  0% { transform: rotate(10deg) translateY(0); }
-  50% { transform: rotate(15deg) translateY(-10px); }
-  100% { transform: rotate(10deg) translateY(0); }
+    0% {
+        transform: rotate(10deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(15deg) translateY(-10px);
+    }
+
+    100% {
+        transform: rotate(10deg) translateY(0);
+    }
 }
 
-.container_general{
+.container_general {
     width: 85%;
 }
 
 /* LE PLUS IMPORTANT : le contenu AU-DESSUS */
 .container_general,
 .titre_text,
-.buttons{
+.buttons {
     position: relative;
     z-index: 2;
 }
 
-.links{
+.links {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    a{
-       img{
-        /* couleur des svg en blanc */
-        filter: brightness(0) invert(1);
-        width: 30px;
-        height: 30px;
-       }
+
+    a {
+        img {
+            /* couleur des svg en blanc */
+            filter: brightness(0) invert(1);
+            width: 30px;
+            height: 30px;
+        }
     }
 }
 
@@ -488,7 +527,7 @@ button{
     z-index: 2;
 }
 
-footer{
+footer {
     color: white;
     text-align: center;
     padding-top: 20px;
@@ -499,7 +538,7 @@ footer{
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0, 0, 0, 0.85);
     z-index: 2000;
     justify-content: center;
     align-items: center;
@@ -525,7 +564,7 @@ footer{
     gap: 40px;
     max-width: 90%;
     max-height: 80%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 12px;
 }
@@ -547,7 +586,8 @@ footer{
     margin-top: 0;
 }
 
-.modal-info p, .modal-info li {
+.modal-info p,
+.modal-info li {
     font-size: 16px;
     line-height: 1.5;
 }
@@ -589,9 +629,11 @@ footer{
     0% {
         transform: translateY(0) rotate(0deg);
     }
+
     50% {
         transform: translateY(-20px) rotate(12deg);
     }
+
     100% {
         transform: translateY(0) rotate(0deg);
     }
@@ -607,6 +649,7 @@ ul {
 
 /* ====== TABLET ====== */
 @media (min-width: 768px) {
+
     .section_1,
     .section_2 {
         flex-wrap: nowrap;
@@ -619,40 +662,64 @@ ul {
         grid-template-rows: repeat(2, 160px);
     }
 
-    .section_1 > div:last-child,
-    .section_2 > div:last-child {
+    .section_1>div:last-child,
+    .section_2>div:last-child {
         text-align: left;
+    }
+
+    .sticker {
+        display: none;
     }
 }
 
 /* Taille Desktop */
 @media (min-width: 1024px) {
-    .section_1, .section_2 {
+
+    .sticker {
+        display: initial;
+    }
+
+    #explore h1 {
+        text-align: initial;
+        margin-bottom: 80px;
+    }
+
+    .section_1,
+    .section_2 {
         justify-content: space-between;
     }
 
     @media (min-width: 1024px) {
 
-    /* Alternance visuelle */
-    .section_2 {
-        flex-direction: row-reverse;
-    }
+        /* Alternance visuelle */
 
-    .mini_gallery {
-        grid-template-columns: repeat(2, 200px);
-        grid-template-rows: repeat(2, 200px);
-    }
+        .mini_gallery {
+            .extra_image {
+                display: block;
+                grid-column: span 2;
+            }
+        }
 
-    #video .container {
-        height: 500px;
-    }
 
-    #aboutMe {
-        p{
-            width: 65vw;
-            /* interligne pour les grand-ecrans */
-            line-height: 1.6;
+        .section_2 {
+            flex-direction: row-reverse;
+        }
+
+        .mini_gallery {
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(2, 200px);
+        }
+
+        #video .container {
+            height: 500px;
+        }
+
+        #aboutMe {
+            p {
+                width: 65vw;
+                /* interligne pour les grand-ecrans */
+                line-height: 1.6;
+            }
         }
     }
-}
 }
