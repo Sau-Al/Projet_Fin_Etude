@@ -156,3 +156,25 @@ hoverElems.forEach(el => {
         cursor.style.background = 'rgba(0, 26, 255, 0.664)';
     });
 });
+
+const images = document.querySelectorAll("img[data-title]");
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+
+    document.getElementById("projectTitle").textContent = img.dataset.title;
+
+    document.getElementById("software").textContent =
+      "Logiciel utilisé : " + img.dataset.software;
+
+    document.getElementById("year").textContent =
+      "Année : " + img.dataset.year;
+
+    document.getElementById("technique").textContent =
+      "Technique : " + img.dataset.technique;
+
+    document.getElementById("description").textContent =
+      img.dataset.description;
+
+  });
+});

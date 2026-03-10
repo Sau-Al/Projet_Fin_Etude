@@ -182,7 +182,7 @@ section{
     }
 }
 
-h1, h2, h3 , p{
+h1, h2, h3 , h4, p{
     font-family: 'Inter', sans-serif;
 }
 
@@ -267,6 +267,8 @@ button{
         width: 100%;
         height: 100%;
         box-shadow: #141A3A 0px 10px 20px;
+        display: flex;
+        justify-content: center;
     }
 
     .infos_video{
@@ -375,7 +377,7 @@ button{
 /* Sticker flottant */
 .sticker {
   position: absolute;       /* flottant par-dessus le contenu */
-  top: 10px;                /* distance depuis le haut */
+  top: 60px;                /* distance depuis le haut */
   right: 10px;              /* distance depuis la droite */
   width: 200px;              /* taille du sticker */
   z-index: 10;              /* au-dessus du texte */
@@ -386,6 +388,11 @@ button{
 .sticker img {
   width: 100%;
   height: auto;
+  /* Contour avec un filter glowy */
+    filter: drop-shadow(0 0 6px #fff)
+            drop-shadow(0 0 12px #ff6ec4)
+            drop-shadow(0 0 18px #7873f5)
+            drop-shadow(0 0 24px #42f5c4);
 }
 
 /* Hover du sticker */
@@ -451,13 +458,27 @@ button{
 }
 
 .gallery img:nth-child(2) {
-    grid-column: span 2;
-    grid-row: span 1;
+    grid-column: span 3;
+    grid-row: span 2;
 }
 
 .gallery img:nth-child(3) {
-    grid-column: span 1;
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+.gallery img:nth-child(4) {
+    grid-column: span 2;
     grid-row: span 2;
+}
+
+.gallery img:nth-child(5) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery img:nth-child(6) {
+    grid-column: span 4;
 }
 
 /* Animation hover */
@@ -557,10 +578,10 @@ footer{
 /* Étoiles */
 .star {
     position: absolute;
-  width: clamp(14px, 2vw, 26px);
-  opacity: 0.8;
-  animation: floatStar ease-in-out infinite;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+    width: clamp(14px, 2vw, 26px);
+    opacity: 0.8;
+    animation: floatStar ease-in-out infinite;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* Animation */
@@ -574,6 +595,14 @@ footer{
     100% {
         transform: translateY(0) rotate(0deg);
     }
+}
+
+ul {
+    list-style-image: url('./media/star.svg');
+    /* couleur blanche pour les etoiles */
+    filter: brightness(0) invert(1);
+    padding: 0;
+    font-family: 'Inter', sans-serif;
 }
 
 /* ====== TABLET ====== */
@@ -621,6 +650,8 @@ footer{
     #aboutMe {
         p{
             width: 65vw;
+            /* interligne pour les grand-ecrans */
+            line-height: 1.6;
         }
     }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,26 +8,31 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
     <title>Projet de fin d'études</title>
 </head>
+
 <body>
     <!-- MENU FIXE À GAUCHE -->
     <!-- Les images des étoiles sont le carousel -->
     <nav class="side-nav">
-    <a href="#titre"><img src="media/star.svg" alt=""></a>
-    <a href="#video"><img src="media/star.svg" alt=""></a>
-    <a href="#gallery"><img src="media/star.svg" alt=""></a>
-    <a href="#explore"><img src="media/star.svg" alt=""></a>
-    <a href="#aboutMe"><img src="media/star.svg" alt=""></a>
-</nav>
+        <a href="#titre"><img src="media/star.svg" alt=""></a>
+        <a href="#video"><img src="media/star.svg" alt=""></a>
+        <a href="#gallery"><img src="media/star.svg" alt=""></a>
+        <a href="#explore"><img src="media/star.svg" alt=""></a>
+        <a href="#aboutMe"><img src="media/star.svg" alt=""></a>
+    </nav>
 
-<!-- Souris personalisée -->
-<div id="custom-cursor"></div>
-    <section id="titre" style="background-image: url('./media/placeholder.png'); background-size: cover; background-position: center;" data-stars>
+    <!-- Souris personalisée -->
+    <div id="custom-cursor"></div>
+    <section id="titre"
+        style="background-image: url('./media/placeholder.png'); background-size: cover; background-position: center;"
+        data-stars>
         <div class="titre_text">
             <h2>Un court métrage par Alicia Sau</h2>
-        <h1>Je veux être</h1>
+            <h1>Je veux être</h1>
         </div>
         <div class="buttons">
             <button onclick="window.location.href='#video'">Visionner</button>
@@ -36,127 +42,149 @@
     <section id="video" data-stars>
         <!-- Les etoiles -->
         <div class="container_general">
-        <!-- Remplacer le lien pour la vidéo officelle plus tard -->
-        <div class="container" class="fade-in">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Qec9ciuw5_k?si=-l7BcNAHlqalGgCI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <p>La vidéo est un placeholder - Je voulais voir si je pouvais intégrer une vidéo dans mon site web.</p>
-        <div class="infos_video">
-            <h2 class="fade-in">Synopsis</h2>
-            <div class="infos fade-in">
-                <h3>2026</h3>
-                <h3>genre</h3>
-                <h3>5min</h3>
+            <!-- Remplacer le lien pour la vidéo officelle plus tard -->
+            <div class="container" class="fade-in">
+                <!-- Video local-->
+                <video controls autoplay muted loop>
+                    <source src="./media/Finale.mov" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo.
             </div>
-            <p class="fade-in">Ce projet consiste en la création d’une œuvre multimédia narrative explorant la construction identitaire, 
-            les aspirations professionnelles et personnelles, ainsi que la pression du temps et
-            du choix d’avenir chez les jeunes adultes.</p>
-        </div>
+            <div class="infos_video">
+                <h2 class="fade-in">Synopsis</h2>
+                <div class="infos fade-in">
+                    <h3>2026</h3>
+                    <h3>genre</h3>
+                    <h3>5min</h3>
+                </div>
+                <p class="fade-in">Ce projet consiste en la création d’une œuvre multimédia narrative explorant la
+                    construction identitaire,
+                    les aspirations professionnelles et personnelles, ainsi que la pression du temps et
+                    du choix d’avenir chez les jeunes adultes.</p>
+            </div>
         </div>
     </section>
     <section id="gallery" data-stars>
         <div class="container_general">
-        <h1>Création du court métrage</h1>
-        <div>
-            <!-- Gallery -->
-        </div>
-        <div>
-            <h2 class="fade-in">Création du court métrage</h2>
-            <p class="fade-in">
-            L’objectif initial de ma recherche était de recréer une scène cinématographique inspirée du film Everything Everywhere All at Once en utilisant principalement la technique du fond vert et le compositing dans Adobe After Effects,
-            combinés au montage et au color grading dans DaVinci Resolve.
-            Je souhaitais reproduire non seulement l’esthétique visuelle de la scène, mais surtout son atmosphère émotionnelle, en explorant des effets de décalage temporel, de lumière et de symbolisme visuel.</p>
-        </div>
+            <h1>Création du court métrage</h1>
+            <div>
+                <!-- Gallery -->
+            </div>
+            <div>
+                <h2 class="fade-in">Création du court métrage</h2>
+                <p class="fade-in">
+                    L’objectif initial de ma recherche était de recréer une scène cinématographique inspirée du film
+                    Everything Everywhere All at Once en utilisant principalement la technique du fond vert et le
+                    compositing dans Adobe After Effects,
+                    combinés au montage et au color grading dans DaVinci Resolve.
+                    Je souhaitais reproduire non seulement l’esthétique visuelle de la scène, mais surtout son
+                    atmosphère émotionnelle, en explorant des effets de décalage temporel, de lumière et de symbolisme
+                    visuel.</p>
+            </div>
         </div>
     </section>
     <section id="explore" data-stars class="fade-in">
         <div class="container_general">
-        <h1>Explorons l'univers visuel</h1>
-        <div>
-            <div class="section_1">
-                <div class="mini_gallery">
-                <!-- mini gallery 6 images-->
-                <img src="./media/essai_1.png" alt="">
-                <img src="./media/essai_1.png" alt="">
-                <img src="./media/essai_1.png" alt="">
-                </div>
+            <h1>Explorons l'univers visuel</h1>
+            <div>
+                <div class="section_1">
+                    <div class="mini_gallery">
+                        <!-- mini gallery 6 images-->
+                        <img src="./media/essai_1.png" alt="">
+                        <img src="./media/essai_1.png" alt="">
+                        <img src="./media/essai_1.png" alt="">
+                    </div>
 
-                <div>
-                <h2>Explorations</h2>
-                <p>Les explorations visuelles du court métrage ont permis d'explore les thèmes de l'identité et du changement à travers des éléments symboliques et des compositions artistiques.</p>
-                <button>Voir plus</button>
+                    <div>
+                        <h2>Explorations</h2>
+                        <p>Les explorations visuelles du court métrage ont permis d'explore les thèmes de l'identité et
+                            du changement à travers des éléments symboliques et des compositions artistiques.</p>
+                        <button>Voir plus</button>
+                    </div>
+                </div>
+                <div class="section_2">
+                    <div class="mini_gallery">
+                        <!-- mini gallery 6 images-->
+                        <img src="./media/essai_1.png" alt="">
+                        <img src="./media/essai_1.png" alt="">
+                        <img src="./media/essai_1.png" alt="">
+                    </div>
+
+                    <div>
+                        <h2>Difficultees et reussites</h2>
+                        <p>Les difficultés rencontrées ont été liées à la gestion du temps et à la complexité de
+                            l'animation. Les réussites ont été les résultats visuels obtenus grâce à l'utilisation de
+                            techniques avancées de compositing.</p>
+                        <button>Voir plus</button>
+                    </div>
                 </div>
             </div>
-            <div class="section_2">
-                <div class="mini_gallery">
-                <!-- mini gallery 6 images-->
-                <img src="./media/essai_1.png" alt=""> 
-                <img src="./media/essai_1.png" alt="">
-                <img src="./media/essai_1.png" alt="">
-                </div>
-
-                <div>
-                <h2>Difficultees et reussites</h2>
-                <p>Les difficultés rencontrées ont été liées à la gestion du temps et à la complexité de l'animation. Les réussites ont été les résultats visuels obtenus grâce à l'utilisation de techniques avancées de compositing.</p>
-                <button>Voir plus</button>
-                </div>
-            </div>
-        </div>
         </div>
     </section>
     <section id="aboutMe" data-stars class="fade-in">
         <div class="container_general">
             <div class="sticker">
-            <img src="./media/star.svg" alt="Sticker décoratif">
-        </div>
+                <img src="./media/pfp.svg" alt="Sticker décoratif">
+            </div>
             <h1>À propos</h1>
-        <p>Finissante en Techniques d’Intégration Multimédia, je me spécialise dans la conception visuelle et la création d’expériences numériques attrayantes.
-            Toujours motivée à perfectionner mes compétences, je suis ouverte à explorer de nouvelles approches créatives et technologiques afin d’apporter des solutions adaptées et innovantes.
-            Je suis actuellement à la recherche d’un stage où je pourrai mettre en valeur ma créativité et mon sens du détail.</p>
-        <div class="sociaux">
-            <h2>Me contacter</h2>
-            <div class="links">
-                <a href="https://www.linkedin.com/in/alicia-sau-4ba896382/"><img src="media/LinkedIn.svg" alt=""></a>
-                <a href="https://www.behance.net/h0pe"><img src="media/Behance.svg" alt=""></a>
-                <a href="mailto:aliciasau8@gmail.com"><img src="media/Email.svg" alt=""></a>
-        </div>
-        </div>
+            <p>Finissante en Techniques d’Intégration Multimédia, je me spécialise dans la conception visuelle et la
+                création d’expériences numériques attrayantes.
+                Toujours motivée à perfectionner mes compétences, je suis ouverte à explorer de nouvelles approches
+                créatives et technologiques afin d’apporter des solutions adaptées et innovantes.
+                Je suis actuellement à la recherche d’un stage où je pourrai mettre en valeur ma créativité et mon sens
+                du détail.</p>
+            <div class="sociaux">
+                <h2>Me contacter</h2>
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/alicia-sau-4ba896382/"><img src="media/LinkedIn.svg"
+                            alt=""></a>
+                    <a href="https://www.behance.net/h0pe"><img src="media/Behance.svg" alt=""></a>
+                    <a href="mailto:aliciasau8@gmail.com"><img src="media/Email.svg" alt=""></a>
+                </div>
+            </div>
 
-        <!-- Gallery -->
-        <!-- Changer les photos pour des projets que j'ai fait -->
-        <div class="gallery">
-            <img src="./media/Illustrator_TP1.png" alt="" data-info="Logiciel: Photoshop | Année: 2026 | Technique: Compositing">
-            <img src="./media/Illustrator_TP2.png" alt="">
-            <img src="./media/Illustrator_TP3.png" alt="">
-            <img src="./media/Illustrator_TP1.png" alt="">
-            <img src="./media/Illustrator_TP2.png" alt="">
-        </div>
+            <!-- Gallery -->
+            <!-- Changer les photos pour des projets que j'ai fait -->
+            <div class="gallery">
+                <img src="./media/illustrator.png" data-title="Paysages imaginaires" data-software="Adobe Illustrator"
+                    data-year="2025" data-technique="Dessin vectoriel"
+                    data-description="Ces illustrations représentent des paysages imaginaires créés avec Illustrator.">
+                <img src="./media/AideTIM.png" data-title="Centre Aide TIM" data-software="PHP, Wordpress" data-year="2025" data-technique="Projet en équipe"
+                    data-description="Travail en équipe pour créer un site web d'aide pour les étudiants en Techniques d'Intégration Multimédia.">
+                <img src="./media/photoshop_TP.png" data-title="Affiche pour un film fictif" data-software="Adobe Photoshop" data-year="2024" data-technique="Montage et retouche photo"
+                    data-description="Affiche créée pour travail final, combinant montage et retouche photo pour promouvoir un film fictif.">
+                <img src="./media/Puppet_thumbnail.png" data-title="Animation 2D" data-software="Adobe After Effect" data-year="2025" data-technique="Animation 2D"
+                    data-description="Animation 2D réalisée avec Adobe After Effects, mettant en scène un personnage animé avec la technique du puppet tool.">
+                <img src="./media/perso_project.png" data-title="Mini film" data-software="After Effect, Premier Pro" data-year="2025" data-technique="Montage vidéo et compositing"
+                    data-description="Mini film réalisé en utilisant Adobe After Effects pour le compositing et Adobe Premiere Pro pour le montage. Ce projet a permis d'explorer des techniques avancées de montage vidéo et de compositing pour créer une narration visuelle captivante.">
+                <img src="./media/exploration.png" data-title="Exploration artistique" data-software="Photographie" data-year="2024" data-technique="Expérimentation créative"
+                    data-description="Exploration artistique à travers la photographie, expérimentant avec la lumière, les ombres et les compositions pour créer des images visuellement intrigantes.">
+            </div>
     </section>
 
     <!-- Lien vers le JS -->
     <script src="script.js"></script>
 
     <div class="image-modal" id="imageModal">
-  <span class="close-btn" id="closeModal">&times;</span>
-  <div class="modal-content">
-    <img src="" alt="" id="modalImage">
-    <div class="modal-info" id="modalInfo">
-      <h3>Nom du projet</h3>
-      <p>Infos supplémentaires ici</p>
-      <ul>
-        <li>Logiciel utilisé : Photoshop</li>
-        <li>Année : 2026</li>
-        <li>Technique : Montage, compositing</li>
-        <!-- Pour rajouter des infos specifique, il faut: 
-        <img src="./media/Illustrator_TP1.png" alt="Illustration 1" data-info="Logiciel: Photoshop | Année: 2026 | Technique: Compositing"> -->
-      </ul>
+        <span class="close-btn" id="closeModal">&times;</span>
+        <div class="modal-content">
+            <img src="" alt="" id="modalImage">
+            <div class="modal-info">
+                <h3 id="projectTitle"></h3>
+                <ul>
+                    <li id="software"></li>
+                    <li id="year"></li>
+                    <li id="technique"></li>
+                </ul>
+                <p id="description"></p>
+
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
 </body>
 <footer>
     <h3>Merci à tous ceux qui ont aidés à créer ce projet.</h3>
     <h4>© 2026 Alicia Sau. Tous droits réservés.</h4>
 </footer>
+
 </html>
