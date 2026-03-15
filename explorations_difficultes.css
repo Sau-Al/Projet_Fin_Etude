@@ -25,11 +25,61 @@ p {
 
 .blog-section {
     display: flex;
+    align-items: center;
     flex-direction: column;
     gap: 30px;
     padding: 40px 5%;
     text-align: center;
 }
+
+.mini-gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.img_gallery,
+.video_gallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Inter, sans-serif;
+}
+
+/* même taille pour images et vidéos */
+.img_gallery img,
+.img_gallery video,
+.video_gallery video{
+    width: 100%;
+    height: 140px;      /* hauteur identique */
+    object-fit: cover;  /* remplit la case sans déformer */
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 15px rgba(246, 167, 198, 0.5),
+        0 8px 30px rgba(168, 230, 207, 0.5),
+        0 12px 45px rgba(167, 199, 231, 0.5);
+}
+
+.img_gallery figcaption,
+.video_gallery figcaption{
+    margin-top: 6px;
+    font-size: 13px;
+    text-align: center;
+}
+
+    img{
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow:
+            0 4px 15px rgba(246, 167, 198, 0.5),
+            0 8px 30px rgba(168, 230, 207, 0.5),
+            0 12px 45px rgba(167, 199, 231, 0.5);
+    }
 
 .text {
     width: 100%;
@@ -40,16 +90,15 @@ p {
 .image {
     width: 100%;
     border-radius: 15px;
-
-    box-shadow:
-        0 4px 15px rgba(246, 167, 198, 0.5),
-        0 8px 30px rgba(168, 230, 207, 0.5),
-        0 12px 45px rgba(167, 199, 231, 0.5);
 }
 
 .image img {
     width: 100%;
     border-radius: 10px;
+    box-shadow:
+        0 4px 15px rgba(246, 167, 198, 0.5),
+        0 8px 30px rgba(168, 230, 207, 0.5),
+        0 12px 45px rgba(167, 199, 231, 0.5);
 
     /* animation hover */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
