@@ -161,8 +161,7 @@ footer button:hover {
 }
 
 .modal img {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 60%;
 }
 
 #modal-caption {
