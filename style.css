@@ -682,6 +682,7 @@ ul {
     .section_1,
     .section_2 {
         justify-content: space-between;
+        align-items: center;
     }
 
     /* Alternance visuelle */
@@ -753,4 +754,14 @@ ul {
         grid-row: span 2;
     }
 
+}
+
+@media (min-width: 1600px){
+    h2, p {
+        font-size: 1.5rem;
+    }
+
+    .section_1>div:last-child, .section_2>div:last-child {
+    max-width: 900px;
+}
 }
