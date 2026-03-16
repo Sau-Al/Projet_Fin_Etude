@@ -32,7 +32,7 @@ p {
     text-align: center;
 }
 
-.mini-gallery{
+.mini-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 15px;
@@ -41,7 +41,7 @@ p {
 }
 
 .img_gallery,
-.video_gallery{
+.video_gallery {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,10 +51,12 @@ p {
 /* même taille pour images et vidéos */
 .img_gallery img,
 .img_gallery video,
-.video_gallery video{
+.video_gallery video {
     width: 100%;
-    height: 140px;      /* hauteur identique */
-    object-fit: cover;  /* remplit la case sans déformer */
+    height: 140px;
+    /* hauteur identique */
+    object-fit: cover;
+    /* remplit la case sans déformer */
 
     border-radius: 10px;
 
@@ -65,21 +67,21 @@ p {
 }
 
 .img_gallery figcaption,
-.video_gallery figcaption{
+.video_gallery figcaption {
     margin-top: 6px;
     font-size: 13px;
     text-align: center;
 }
 
-    img{
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow:
-            0 4px 15px rgba(246, 167, 198, 0.5),
-            0 8px 30px rgba(168, 230, 207, 0.5),
-            0 12px 45px rgba(167, 199, 231, 0.5);
-    }
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow:
+        0 4px 15px rgba(246, 167, 198, 0.5),
+        0 8px 30px rgba(168, 230, 207, 0.5),
+        0 12px 45px rgba(167, 199, 231, 0.5);
+}
 
 .text {
     width: 100%;
@@ -148,7 +150,7 @@ footer button:hover {
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -177,12 +179,31 @@ footer button:hover {
     cursor: pointer;
 }
 
+/* Version MOBILE */
+@media (max-width: 767px) {
+    .blog-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+        padding: 40px 5%;
+
+        .text {
+            width: 100%;
+            line-height: 1.6;
+        }
+    }
+
+    .blog-section.reverse {
+        flex-direction: column;
+    }
+}
+
 
 /* ================= */
-/* TABLETTE */
+/* GRAND ÉCRAN */
 /* ================= */
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 
     .blog-section {
         flex-direction: row;
@@ -195,21 +216,12 @@ footer button:hover {
         flex-direction: row-reverse;
     }
 
-}
-
-
-/* ================= */
-/* GRAND ÉCRAN */
-/* ================= */
-
-@media (min-width: 1200px) {
-
-    .blog-section {
-        gap: 60px;
-        padding: 80px 10%;
-    }
-
     .blog-header {
         padding: 80px 20px;
+    }
+
+    .text {
+        /* font-size pour les grands écrans */
+        font-size: 16px;
     }
 }
